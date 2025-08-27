@@ -1,2 +1,4 @@
 # bookbot
-this is a repo to practice python
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
+
