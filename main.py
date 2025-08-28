@@ -1,4 +1,4 @@
-from stats import words_in_book
+from stats import words_in_book, get_char
 
 def get_book_text(book_path):
     with open(book_path) as f:
@@ -7,6 +7,7 @@ def get_book_text(book_path):
 
 def main():
     text = get_book_text("books/frankenstein.txt")
-    print(f"{words_in_book(text)} words found in the document")  
+    print(f"{words_in_book(text)} words found in the document")
+    print(get_char(text))
      
 main()
