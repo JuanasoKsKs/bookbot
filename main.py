@@ -1,4 +1,4 @@
-from stats import words_in_book, get_char
+from stats import words_in_book, get_char, dict_to_sorted_list
 
 def get_book_text(book_path):
     with open(book_path) as f:
@@ -13,8 +13,10 @@ def main():
     print("---------Word Count-----------")
     print(f"Found {words_in_book(text)} total words")
     print("------ Character Count -------")
-    last_dictionary = get_char(text)
+    first_dic = get_char(text)
+    last_dictionary = dict_to_sorted_list(first_dic)
     for each in last_dictionary:
-        print(f"{each}: {last_dictionary[each]}")
+        if each["char"].isalpha():
+            print(f"{each["char"]}: {each["num"]}")
      
 main()

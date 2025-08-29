@@ -13,5 +13,14 @@ def get_char(file_contents):
         else:
             char_dic[ch] = 1
     return char_dic
-#    for each in char_dic:
-#        print(f"'{each}': {char_dic[each]}")
+
+def sort_on(d):
+    return d["num"]
+
+#Takes a dictionary and return a list of sorted dictionaries
+def dict_to_sorted_list(dictionary):
+    new_list = []
+    for each in dictionary:
+        new_list.append({"char": each, "num": dictionary[each]})
+    new_list.sort(reverse = True, key = sort_on)
+    return new_list
